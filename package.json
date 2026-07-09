@@ -1,0 +1,32 @@
+{
+  "name": "astralis",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ASTRALIS — Listening to the Universe. A living digital artwork translating real astronomical events into light, motion and sound.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.6.1",
+    "@react-three/postprocessing": "^3.0.4",
+    "framer-motion": "^12.42.2",
+    "idb-keyval": "^6.3.0",
+    "next": "^16.2.10",
+    "postprocessing": "^6.39.2",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "three": "^0.185.1",
+    "tone": "^15.1.22",
+    "zustand": "^5.0.14"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@types/three": "^0.185.1",
+    "typescript": "^5.9.3"
+  }
+}
