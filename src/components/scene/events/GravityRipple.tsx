@@ -84,12 +84,14 @@ export default function GravityRipple({ perf }: { perf: PerformanceItem }) {
     [],
   );
 
+  const skyPos = useMemo(() => raDecToDir(ev.ra, ev.dec).multiplyScalar(400), [ev]);
+
   return (
     <group>
       <mesh ref={ringRef} position={center} scale={[1500, 1500, 1]} material={ringMat} frustumCulled={false}>
         <planeGeometry args={[1, 1]} />
       </mesh>
-      <HoverTarget position={center} radius={60} event={ev} />
+      <HoverTarget position={skyPos} radius={80} event={ev} />
     </group>
   );
 }

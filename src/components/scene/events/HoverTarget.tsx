@@ -15,13 +15,16 @@ export default function HoverTarget({
   radius: number;
   event: CosmicEvent;
 }) {
-  const onOver = (e: ThreeEvent<PointerEvent>) => {
+  const onMove = (e: ThreeEvent<PointerEvent>) => {
     useStore.getState().setHover({ event, x: e.clientX, y: e.clientY });
   };
+  const onOut = () => {
+    useStore.getState().setHover(null);
+  };
   return (
-    <mesh position={position} onPointerOver={onOver}>
+    <mesh position={position} onPointerMove={onMove} onPointerOut={onOut} frustumCulled={false}>
       <sphereGeometry args={[radius, 8, 8]} />
-      <meshBasicMaterial transparent opacity={0} depthWrite={false} colorWrite={false} />
+      <meshBasicMaterial transparent opacity={0.0001} depthWrite={false} depthTest={false} />
     </mesh>
   );
 }

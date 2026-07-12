@@ -179,11 +179,13 @@ export default function NeutrinoThread({ perf }: { perf: PerformanceItem }) {
     u.uFade.value = 1 - smoothstep(TRAVEL_SECONDS, TOTAL_SECONDS, elapsed);
   });
 
+  const skyPos = useMemo(() => raDecToDir(ev.ra, ev.dec).multiplyScalar(380), [ev]);
+
   return (
     <group>
       <mesh geometry={ribbon} material={ribbonMat} frustumCulled={false} />
       <points geometry={motes} material={moteMat} frustumCulled={false} />
-      <HoverTarget position={mid} radius={34} event={ev} />
+      <HoverTarget position={skyPos} radius={50} event={ev} />
     </group>
   );
 }
