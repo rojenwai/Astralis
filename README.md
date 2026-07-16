@@ -1,4 +1,4 @@
-# ASTRALIS — Listening to the Universe
+# ASTRALIS - Listening to the Universe
 
 A living digital artwork. Real astronomical events — neutrinos, gamma-ray bursts,
 gravitational waves, solar weather — are continuously translated into light, motion
